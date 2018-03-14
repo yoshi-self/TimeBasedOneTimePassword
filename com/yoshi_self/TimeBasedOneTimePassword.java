@@ -33,7 +33,7 @@ public class TimeBasedOneTimePassword {
         // Java has no unsigned logn but bytes are same as unsigned until 9223372036854775807
         long now = System.currentTimeMillis() / 1000L;
         long counter = (now - TIME_START) / TIME_STEP;
-        
+
         // convert long to bytes[]
         ByteBuffer buffer = ByteBuffer.allocate(Long.BYTES);
         buffer.putLong(counter);

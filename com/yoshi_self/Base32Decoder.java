@@ -25,12 +25,11 @@ public class Base32Decoder {
     }
 
     public Base32Decoder(byte[] source) {
-        this.source = source; 
+        this.source = source;
     }
 
     public Base32Decoder(String source) {
-        this.source = source.getBytes(StandardCharsets.US_ASCII); 
-        //this.source = source.getBytes(); 
+        this.source = source.getBytes(StandardCharsets.US_ASCII);
     }
 
     public void setSource(byte[] source) {
@@ -104,7 +103,7 @@ public class Base32Decoder {
     protected byte[] decodeUnit() {
         int bitSize =  this.DECODE_UNIT * this.ENCODE_UNIT;
         BitSet bitSet = new BitSet(bitSize);
-        
+
         for(int i = this.pos, bitPos = 0; i < this.pos + this.DECODE_UNIT; ++i, bitPos += this.ENCODE_UNIT) {
             byte b = this.source[i];
             if(b == this.PADDING_BYTE) {
