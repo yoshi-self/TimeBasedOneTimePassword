@@ -5,5 +5,5 @@ Calculates Time-based One-time Password same as Google Authenticator
 See Main.java
 
 ## Note
-Calculating Time-Based One-Time Password needs current time.
-This class does not manage time so make sure your machine's system time accurate
+Calculating Time-Based One-Time Password needs current time.  
+This class does not manage time so make sure your machine's system time is accurate.
